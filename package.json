@@ -1,0 +1,37 @@
+{
+  "name": "twitterbot-vrstories",
+  "version": "0.1.0",
+  "description": "Reads a stream of articles and posts them to Twitter",
+  "main": "main.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon main.js 2>&1 | bunyan",
+    "start": "node main.js",
+    "test": "NODE_ENV=test LOG_NAME=twitterbot-vrstories-test mocha 2>&1 | bunyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blikkhq/twitterbot-vrstories.git"
+  },
+  "author": "Denny Britz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blikkhq/twitterbot-vrstories/issues"
+  },
+  "homepage": "https://github.com/blikkhq/twitterbot-vrstories",
+  "dependencies": {
+    "blikk-logjs": "^0.1.2",
+    "bluebird": "^2.9.14",
+    "dotenv": "^1.0.0",
+    "kafka-rest": "git://github.com/confluentinc/kafka-rest-node",
+    "mocha": "^2.2.1",
+    "superagent": "^1.1.0",
+    "twitter": "^1.2.5",
+    "underscore": "^1.8.2"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "mocha": "^2.2.1",
+    "nock": "^1.2.0",
+    "sinon": "^1.14.1"
+  }
+}

@@ -1,0 +1,25 @@
+machine:
+  services:
+    - docker
+  environment:
+    DOCKER_EMAIL: deploy@blikk.co
+    DOCKER_USER: blikkdeploy
+    LOG_NAME: twitterbot-vrstories
+    VERSION: 0.1.0
+
+dependencies:
+  pre:
+    - docker login -e $DOCKER_EMAIL  -u $DOCKER_USER -p $DOCKER_PASSWORD
+
+test:
+  pre:
+    - npm install -g bunyan
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker build -t blikk/twitterbot-vrstories .
+      - docker tag blikk/twitterbot-vrstories:latest blikk/twitterbot-vrstories:$CIRCLE_SHA1
+      - docker tag blikk/twitterbot-vrstories:latest blikk/twitterbot-vrstories:$VERSION
+      - docker push blikk/twitterbot-vrstories
