@@ -1,6 +1,6 @@
 {
   "name": "twitterbot-vrstories",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reads a stream of articles and posts them to Twitter",
   "main": "main.js",
   "scripts": {
@@ -23,10 +23,11 @@
     "bluebird": "^2.9.14",
     "dotenv": "^1.0.0",
     "kafka-rest": "git://github.com/confluentinc/kafka-rest-node",
+    "lodash": "^3.6.0",
     "mocha": "^2.2.1",
+    "moment": "^2.10.2",
     "superagent": "^1.1.0",
-    "twitter": "^1.2.5",
-    "underscore": "^1.8.2"
+    "twitter": "^1.2.5"
   },
   "devDependencies": {
     "chai": "^2.1.2",
