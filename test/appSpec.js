@@ -63,7 +63,7 @@ describe('The app', function(){
       TWITTER_ACCESS_TOKEN_KEY: TWITTER_ACCESS_TOKEN_KEY
     }).then(function(){
       testStream.emit('read', [{ value: {
-        event: 'ARTICLE_ADDED',
+        event: 'ARTICLE_CREATED',
         data: JSON.stringify({newRecord: {title: 'Hello World', url: 'http://www.helloworld.com'}})
       }}]);
     });
