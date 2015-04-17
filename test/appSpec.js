@@ -64,7 +64,7 @@ describe('The app', function(){
     }).then(function(){
       testStream.emit('read', [{ value: {
         event: 'ARTICLE_ADDED',
-        data: JSON.stringify({title: 'Hello World', url: 'http://www.helloworld.com'})
+        data: JSON.stringify({newRecord: {title: 'Hello World', url: 'http://www.helloworld.com'}})
       }}]);
     });
 
