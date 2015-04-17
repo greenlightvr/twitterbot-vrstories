@@ -1,6 +1,6 @@
 {
   "name": "twitterbot-vrstories",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reads a stream of articles and posts them to Twitter",
   "main": "main.js",
   "scripts": {
